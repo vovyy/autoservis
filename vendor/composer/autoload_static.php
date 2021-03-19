@@ -15,6 +15,10 @@ class ComposerStaticInit282f65bd5f240d12c712912b97f1835d
         array (
             'Symfony\\Thanks\\' => 15,
         ),
+        'C' => 
+        array (
+            'Contributte\\FormsBootstrap\\' => 27,
+        ),
         'A' => 
         array (
             'App\\' => 4,
@@ -25,6 +29,10 @@ class ComposerStaticInit282f65bd5f240d12c712912b97f1835d
         'Symfony\\Thanks\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/thanks/src',
+        ),
+        'Contributte\\FormsBootstrap\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/contributte/forms-bootstrap/src',
         ),
         'App\\' => 
         array (
@@ -293,6 +301,7 @@ class ComposerStaticInit282f65bd5f240d12c712912b97f1835d
         'Nette\\Forms\\Controls\\TextInput' => __DIR__ . '/..' . '/nette/forms/src/Forms/Controls/TextInput.php',
         'Nette\\Forms\\Controls\\UploadControl' => __DIR__ . '/..' . '/nette/forms/src/Forms/Controls/UploadControl.php',
         'Nette\\Forms\\Form' => __DIR__ . '/..' . '/nette/forms/src/Forms/Form.php',
+        'Nette\\Forms\\FormFactory' => __DIR__ . '/..' . '/nette/forms/src/Forms/FormFactory.php',
         'Nette\\Forms\\FormRenderer' => __DIR__ . '/..' . '/nette/forms/src/Forms/FormRenderer.php',
         'Nette\\Forms\\Helpers' => __DIR__ . '/..' . '/nette/forms/src/Forms/Helpers.php',
         'Nette\\Forms\\IControl' => __DIR__ . '/..' . '/nette/forms/src/compatibility.php',
@@ -464,6 +473,7 @@ class ComposerStaticInit282f65bd5f240d12c712912b97f1835d
         'Tester\\Runner\\TestHandler' => __DIR__ . '/..' . '/nette/tester/src/Runner/TestHandler.php',
         'Tester\\TestCase' => __DIR__ . '/..' . '/nette/tester/src/Framework/TestCase.php',
         'Tester\\TestCaseException' => __DIR__ . '/..' . '/nette/tester/src/Framework/TestCase.php',
+        'Tester\\TestCaseSkippedException' => __DIR__ . '/..' . '/nette/tester/src/Framework/TestCase.php',
         'Tracy\\Bar' => __DIR__ . '/..' . '/tracy/tracy/src/Tracy/Bar/Bar.php',
         'Tracy\\BlueScreen' => __DIR__ . '/..' . '/tracy/tracy/src/Tracy/BlueScreen/BlueScreen.php',
         'Tracy\\Bridges\\Nette\\Bridge' => __DIR__ . '/..' . '/tracy/tracy/src/Bridges/Nette/Bridge.php',
