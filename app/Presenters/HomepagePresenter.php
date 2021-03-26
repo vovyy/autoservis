@@ -32,32 +32,32 @@ final class HomepagePresenter extends Nette\Application\UI\Presenter
 
 
 		$form->addText('registracni_znacka', 'SPZ:')
-
+			->setHtmlAttribute('class', 'form_aut')
 			->setHtmlAttribute('rows', '4')
 			->setHtmlAttribute('cols', '32')
+
 			->setRequired();
 
 
 		$form->addText('vyrobce', 'Výrobce:')
+			->setHtmlAttribute('class', 'form_aut')
 			->setHtmlAttribute('type', 'text')
-			->setHtmlAttribute('class', 'daterange')
 			->setRequired();
 
 		$form->addText('rok_vyroby', 'Rok výroby:')
+			->setHtmlAttribute('class', 'form_aut')
 			->setHtmlAttribute('type', 'text')
-			->setHtmlAttribute('class', 'daterange')
 			->setRequired();
 		$form->addText('barva', 'Barva:')
+			->setHtmlAttribute('class', 'form_aut')
 			->setHtmlAttribute('type', 'text')
-			->setHtmlAttribute('class', 'daterange')
 			->setRequired();
 		$form->addText('obsah_motoru', 'Obsah motoru:')
+			->setHtmlAttribute('class', 'form_aut')
 			->setHtmlAttribute('type', 'text')
-			->setHtmlAttribute('class', 'daterange')
 			->setRequired();
 
 		$form->addSubmit('send', 'Přidat')
-
 			->setHtmlAttribute('class', 'button button3 btn-block col-lg-12 col-md-12 col-sm-12')
 			->setHtmlAttribute('id', 'submit');
 
@@ -81,7 +81,11 @@ final class HomepagePresenter extends Nette\Application\UI\Presenter
 			$forms = $this->database->table('automobily')->insert($values);
 
 
-			$this->redirect('default');
+			$this->redirect('Majitele:majitele');
 		}
+	}
+	public function renderDefault(): void
+	{
+		$this->template->form = $this->database->table('automobily');
 	}
 }

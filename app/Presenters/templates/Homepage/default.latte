@@ -1,5 +1,46 @@
 {block content}
-<h1>Automobily</h1>
+{include scripts}
+<h1 class="display-4">Automobily</h1>
+
 <br />
 <br> 
  {control postForm}
+<br>
+<br>
+
+
+ <div class="column">
+    <table id="records" class="table table-striped table-bordered" style="padding-top:5%;">
+
+        <thead>
+            <tr>
+
+                <th><i class="fas fa-pen-fancy"></i>SPZ</th>
+                <th><i class="fas fa-clock"></i>Výrobce</th>
+
+                <th><i  class="fas fa-edit"></i>Rok Výroby</th>
+                <th><i class="fas fa-trash-alt"></i>Barva</th>
+                <th><i class="fas fa-check"></i> Obsah motoru</th>
+            </tr>
+        </thead>
+
+        <tbody>
+		
+            {foreach $form as $frm}
+			
+			
+	<td>{$frm->registracni_znacka}</td>
+	<td>{$frm->vyrobce}</td>
+	<td>{$frm->rok_vyroby}</td>
+	<td>{$frm->barva}</td>
+	<td>{$frm->obsah_motoru}</td>
+	
+
+
+		</tr>
+			{/foreach}
+
+        </tbody>
+    </table>
+  </div>
+ 
