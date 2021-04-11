@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => 'fb824d8111f1be56c29cf10a3cb4ae297f301ea8',
+    'reference' => 'f81076008d7083b6f3b61cb805af1e1c29efcbd6',
     'name' => 'nette/web-project',
   ),
   'versions' => 
@@ -198,7 +198,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => 'fb824d8111f1be56c29cf10a3cb4ae297f301ea8',
+      'reference' => 'f81076008d7083b6f3b61cb805af1e1c29efcbd6',
     ),
     'symfony/thanks' => 
     array (

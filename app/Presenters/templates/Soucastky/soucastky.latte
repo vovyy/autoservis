@@ -1,0 +1,51 @@
+{block content}
+{include scripts}
+            <div class="container">
+            {control postForm}
+            <div class="column">
+    <table class="table table-striped table-bordered" style="margin-top:1%;">
+
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Zaměstnanci ID</th>
+                <th scope="col">Opravy ID</th>
+                <th scope="col">Součástka</th>
+                <th scope="col">Typ vozu</th>
+                <th scope="col">Cena</th>
+                <th scope="col">Skladem</th>
+                <th scope="col">Automobily ID</th>
+                <th scope="col">Automobily typ vozu ID</th>
+                <th scope="col">Automobily majitelé ID</th>
+                <th scope="col">Editovat</th>
+                <th scope="col">Smazat</th>
+            </tr>
+        </thead>
+
+        <tbody>
+        <tr>
+            {foreach $soucastky as $s}
+
+
+    <td>{$s->id}</td>
+    <td>{$s->zamestnanci_id}</td>
+    <td>{$s->opravy_id}</td>
+    <td>{$s->soucastka}</td>
+    <td>{$s->typ_vozu}</td>
+    <td>{$s->cena}</td>
+    <td>{$s->skladem_ks}</td>
+    <td>{$s->automobily_id}</td>
+    <td>{$s->automobily_typ_vozu_id}</td>
+    <td>{$s->automobily_majitele_id}</td>
+    <td><a n:href="edit $s->id">edit</a></td>
+    <td><a n:href="delete $s->id">delete</a></td>
+
+
+        </tr>
+            {/foreach}
+
+        </tbody>
+    </table>
+  </div>
+  </div>
+    </div>

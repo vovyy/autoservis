@@ -11,4 +11,10 @@ class Main_model
   {
     $this->database = $database;
   }
+  function delete_by_id($id)
+  {
+    return $this->database->table('automobily')
+      ->where("id", $id)
+      ->delete('automobily');
+  }
 }

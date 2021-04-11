@@ -12,22 +12,40 @@
 
 <body class="container">
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Navbar</a>
-    <ul class="nav">
-  <li class="nav-item">
-    <a class="nav-link " aria-current="page" n:href="Homepage:default">Automobily</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" n:href="Majitele:majitele">Majitele</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-  </li>
-</ul>
-     
+  <div class="container-fluid">
+    <a class="navbar-brand" n:href="Homepage:default">Autoservis</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" n:href="Homepage:default" n:if="$user->isLoggedIn()">Automobily</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" n:href="Majitele:majitele" n:if="$user->isLoggedIn()">Majitelé</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" n:href="Opravy:opravy" n:if="$user->isLoggedIn()">Opravy</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" n:href="Soucastky:soucastky" n:if="$user->isLoggedIn()">Součástky</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" n:href="TypVozu:typvozu" n:if="$user->isLoggedIn()">Typ vozu</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" n:href="Zamestnanci:Zamestnanci" n:if="$user->isLoggedIn()">Zaměstnanci</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" n:href="Sign:in" n:if="!$user->isLoggedIn()">Přihlásit se</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" n:href="Sign:out" n:if="$user->isLoggedIn()">Odhlásit se</a>
+        </li>
+      </ul>
+    </div>
+  </div>
 </nav>
 	<div n:foreach="$flashes as $flash" n:class="flash, $flash->type">{$flash->message}</div>
 

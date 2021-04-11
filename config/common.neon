@@ -20,3 +20,10 @@ di:
 services:
 	- App\Router\RouterFactory::createRouter
 	- App\Model\Main_model
+
+security:
+	users:
+		admin: secret  # user 'admin', password 'secret'
+	authentication:
+		expiration: 30 minutes
+		storage: session

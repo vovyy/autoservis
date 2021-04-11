@@ -8,11 +8,8 @@
         <thead>
             <tr>
                 <th scope="col">ID</th>
-                <th scope="col">Jméno</th>
-                <th scope="col">Příjmení</th>
-                <th scope="col">Adresa</th>
-                <th scope="col">Telefon</th>
-                <th scope="col">e-mail</th>
+                <th scope="col">Typ vozidla</th>
+                <th scope="col">Převodovka</th>
                 <th scope="col">Editovat</th>
                 <th scope="col">Smazat</th>
             </tr>
@@ -20,16 +17,16 @@
 
         <tbody>
         <tr>
-            {foreach $autoservis as $m}
-        
-    <td>{$m->id}</td>
-    <td>{$m->jmeno}</td>
-    <td>{$m->prijmeni}</td>
-    <td>{$m->adresa}</td>
-    <td>{$m->telefon}</td>
-    <td>{$m->email}</td>
-    <td><a n:href="edit $m->id">edit</a></td>
-    <td><a n:href="delete $m->id">delete</a></td>
+            {foreach $typvozu as $t}
+
+
+    <td>{$t->id}</td>
+    <td>{$t->typ_vozu}</td>
+    <td>{$t->prevodovka}</td>
+    <td><a n:href="edit $t->id">edit</a></td>
+    <td><a n:href="delete $t->id">delete</a></td>
+
+
         </tr>
             {/foreach}
 
