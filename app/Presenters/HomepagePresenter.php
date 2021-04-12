@@ -66,7 +66,7 @@ final class HomepagePresenter extends Nette\Application\UI\Presenter
 			->setHtmlAttribute('placeholder', 'např. 2001')
 			->setRequired();
 		$form->addText('barva', 'Barva:')
-			->setHtmlAttribute('type', 'text')
+			->setHtmlAttribute('type', 'color')
 			->setRequired();
 		$form->addText('obsah_motoru', 'Obsah motoru:')
 			->setHtmlAttribute('type', 'text')
